@@ -13,6 +13,13 @@
 </div>
 <ul>
   <h1>Parties:</h1>
+    <div class="angular-google-map-container">
+      <ui-gmap-google-map center="map.center" events="map.events" zoom="map.zoom">
+        <ui-gmap-markers models="parties" coords="'location'" click="'onClicked'" fit="true" idKeys="'_id" doRebuildAll="true">
+        </ui-gmap-markers>
+    </ui-gmap-google-map>
+  </div>
+
   <div>
     <input type="search" ng-model="search" placeholder="Search">
     <select ng-model="orderProperty">
